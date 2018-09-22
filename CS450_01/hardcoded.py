@@ -64,9 +64,23 @@ class HardCodedModel:
 
 classifier = HardCodedClassifier()
 model = classifier.fit(X_train, y_train)
-y_predicted = model.predict(X_train)
+y_predicted = model.predict(X_test)
 
-print("Y_predicted: ", y_predicted)
+# print("Y_predicted: ", y_predicted)
+	# now compare results.
+sumCorrect = 0
+sumError = 0
+for i in range(0,len(y_predicted)):
+	if y_predicted[i] == y_test[i]:
+		sumCorrect += 1
+	else:
+		sumError += 1
+
+percentError = 100 * (sumError / (sumError + sumCorrect))
+
+print("Percent Error: {} %".format(percentError))
+print("Sum Error: {}".format(sumError))
+print("Sum Correct: {}".format(sumCorrect))
 
 
 # *********** ABOVE AND BEYOND: N-Fold  ***********
