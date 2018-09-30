@@ -68,12 +68,9 @@ class KNNModel:
 				if isFirst:
 					max = LA.norm(old_point - new_point)
 					isFirst = False
-
 				distance = LA.norm(old_point - new_point)
-
 				if distance >= max:
 					max = distance
-
 				distances.append(distance)
 			
 			close_classes = []
@@ -85,8 +82,6 @@ class KNNModel:
 						min = item
 						minIndex = index
 						distances[index] = max
-
-				
 				close_classes.append(y_train[minIndex])
 			
 			# find the class that is most common
