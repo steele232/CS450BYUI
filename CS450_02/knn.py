@@ -20,7 +20,7 @@ iris = datasets.load_iris()
 # used code from example in docs : 
 # http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.33, random_state=32)
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.33, random_state=52)
 # print(X_train)
 # print(X_test)
 # print(y_train)
@@ -39,6 +39,7 @@ print("ACCURACY FOR OFF-SHELF KNN : {}".format(acc))
 
 # *********** IMPLEMENT YOUR OWN NEW "ALGORITHM" ***********
 from numpy import linalg as LA
+from sklearn import preprocessing
 
 class KNNClassifier:
 	def __init__(self, n_neighbors=3):
@@ -52,11 +53,22 @@ class KNNModel:
 	def __init__(self, X_train, y_train, n_neighbors):
 		self.X_train = X_train
 		self.y_train = y_train
+
+		# Lets normalize data
+		# http://sebastianraschka.com/Articles/2014_about_feature_scaling.html
+		self.std_scale = preprocessing.StandardScaler().fit(self.X_train)
+		self.X_train = self.std_scale.transform(self.X_train)
+
+
 		self.n_neighbors = n_neighbors
 
 	def predict(self, X_test):
-		predictions = []
+		# normalize new test data 
 
+		X_test = self.std_scale.transform(X_test)
+
+		# THEN do the predictions
+		predictions = []
 		# for each element for X_test
 		for new_point in X_test:
 
@@ -93,7 +105,7 @@ class KNNModel:
 		return predictions
 
 
-# *********** RUN OWN NEW "ALGORITHM" ***********
+# *********** RUN OWN NEW ALGORITHM ***********
 classifier = KNNClassifier(n_neighbors=3)
 model = classifier.fit(X_train, y_train)
 y_predicted = model.predict(X_test)
