@@ -1,0 +1,107 @@
+ 
+ACCURACY ==> IRIS @ DEFAULT, AS-IS @ SKLearn Decision Tree : 0.92
+ 
+ACCURACY ==> IRIS @ BINNING with 2 bins @ SKLearn Decision Tree : 0.78
+ACCURACY ==> IRIS @ BINNING with 3 bins @ SKLearn Decision Tree : 0.94
+ACCURACY ==> IRIS @ BINNING with 4 bins @ SKLearn Decision Tree : 0.96
+ACCURACY ==> IRIS @ BINNING with 5 bins @ SKLearn Decision Tree : 0.9
+ACCURACY ==> IRIS @ BINNING with 6 bins @ SKLearn Decision Tree : 0.94
+ACCURACY ==> IRIS @ BINNING with 7 bins @ SKLearn Decision Tree : 0.96
+ACCURACY ==> IRIS @ BINNING with 8 bins @ SKLearn Decision Tree : 0.96
+ACCURACY ==> IRIS @ BINNING with 9 bins @ SKLearn Decision Tree : 0.9
+ 
+ACCURACY ==> VOTING @ Removing Missing Rows @ SKLearn Decision Tree : 0.9361702127659575
+ 
+ACCURACY ==> VOTING @ Removing Missing Columns @ SKLearn Decision Tree : ????
+Length of X : 435
+Shape of X : (435, 0)
+Length of y : 435
+Shape of y : (435, 1)
+--> !!! If you remove columns with any '?' in them, then you have 0 columns left. 
+ 
+ACCURACY ==> VOTING @ ONE HOT ENCODING @ SKLearn Decision Tree : 0.9080459770114943
+ 
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 3 (w/1-HOT) @ SKLearn Decision Tree : 0.9511494252873564
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 4 (w/1-HOT) @ SKLearn Decision Tree : 0.9367816091954023
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 5 (w/1-HOT) @ SKLearn Decision Tree : 0.9482758620689655
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 6 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 7 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 8 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 9 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 10 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 11 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 12 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 13 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 14 (w/1-HOT) @ SKLearn Decision Tree : 0.9396551724137931
+ 
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 3 (w/1-HOT) @ SKLearn Decision Tree : 0.9568965517241379
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 4 (w/1-HOT) @ SKLearn Decision Tree : 0.9482758620689655
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 5 (w/1-HOT) @ SKLearn Decision Tree : 0.9568965517241379
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 6 (w/1-HOT) @ SKLearn Decision Tree : 0.9511494252873564
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 7 (w/1-HOT) @ SKLearn Decision Tree : 0.9626436781609196
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 8 (w/1-HOT) @ SKLearn Decision Tree : 0.9683908045977011
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 9 (w/1-HOT) @ SKLearn Decision Tree : 0.9683908045977011
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 10 (w/1-HOT) @ SKLearn Decision Tree : 0.9683908045977011
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 11 (w/1-HOT) @ SKLearn Decision Tree : 0.9683908045977011
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 12 (w/1-HOT) @ SKLearn Decision Tree : 0.9683908045977011
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 13 (w/1-HOT) @ SKLearn Decision Tree : 0.9683908045977011
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 14 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 15 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 16 (w/1-HOT) @ SKLearn Decision Tree : 0.9568965517241379
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 17 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 18 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 19 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 20 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 21 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 22 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 23 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 24 (w/1-HOT) @ SKLearn Decision Tree : 0.9597701149425287
+ 
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 3 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9567567567567568
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 4 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9783783783783784
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 5 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 6 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 7 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 8 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 9 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 10 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 11 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 12 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 13 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Depth: 14 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+ 
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 3 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 4 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9567567567567568
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 5 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 6 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9675675675675676
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 7 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 8 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 9 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 10 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 11 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 12 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 13 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 14 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 15 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 16 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 17 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 18 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 19 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 20 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 21 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 22 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 23 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+CV ACCURACY ==> VOTING @ PRUNING Max Leaves: 24 (w/ Removing Missing Rows) @ SKLearn Decision Tree : 0.9621621621621622
+ 
+Best best_cross_val_score: 0.9783783783783784
+As of this writing: This came from Removing Missing Rows, and using a Max Depth of 4
+ 
+So we will use this configuration for testing on the test set, the final test. Here it goes!!
+FINAL TEST ACCURACY ==> VOTING @ Removing Missing Rows, Max_Depth=4 @ SKLearn Decision Tree : 0.9787234042553191
+ 
+ 
+ACCURACY ==> AUTO-MPG @ SKLearn Decision Tree Regressor: 2.6835443037974684
+I believe this means that the regression model we made 
+is, on average, within +/- 2 mpg of the actual 
+ 
+ 
