@@ -1,0 +1,190 @@
+Decision Tree
+m = 30;
+3/10
+2/10
+3/10
+4/10
+5/10
+4/10
+- 
+1/10
+2/10
+3/10
+3/10
+2/10
+
+
+m = 40; 
+4/10
+4/10
+2/10
+3/10
+4/10
+
+m = 45;
+3/5
+1/5
+2/5
+2/5
+1/5
+
+m = 10;
+5/10
+4/10
+5/10
+4/10
+1/10
+5/10
+1/10
+6/10
+5/10
+2/10
+2/10
+6/10
+
+
+SVM
+m = 30;
+3/10
+2/10
+2/10
+2/10
+2/10
+2/10
+
+============================================
+ERROR ANALYSIS 6-30-18
+============================================
+1=>2 ? Orange tint? Small Diameter/Area? ??
+1=>1
+1=>3 ? IDK.. More texture on leaf.. ?
+
+On this svm.SVC() it just always guess 1...
+See if that persists..
+- second run always picked 2..
+- 3rd run always picked 1..
+- 4th run always picked 3
+1
+2
+1
+3
+3
+1
+1
+1
+
+=============================================
+MLPClassifier (Neural Network based Classifier)
+ ... seems to persist on this model too. 
+- picked all 3s.
+3
+3
+3
+1
+1
+3
+1
+2 * first one!
+2
+3
+3
+2
+1
+
+============================================
+Decision tree does NOT just pick one and go with it,
+but it also doesn't do terribly well. It has the same 
+accuracy as randomly picking correctly. 
+
+
+
+============================================
+AFTER correctly labeling my photos, I'm recording results again.
+I'm using the Decsion Tree and I'm using m=30
+I also finally automated the calculating of percentages for me.
+These are all numbers out of 10
+
+3
+4
+5
+5
+7
+4
+6
+3
+5
+6
+2
+7
+5
+7
+7
+8
+6
+7
+7
+3
+
+# I have a hypothesis that when we have a low accuracy, 
+# it's because we have a skewed training set on accident..
+# I'm now trying to track num1, num2, num3 s.
+7
+6
+7
+7
+6 - nice even split on 1,2,3 in training set.
+7 - nice split again.
+6
+6
+4 - 8/10/11 split
+3 - 12/10/7
+6 - 8/8/13 
+7 - 10/10/9
+5 - 12/9/8
+8 - 12/10/7
+7 - 11/9/9
+4 - 7/8/14
+7 - 9/9/11
+3 - 8/9/12
+8 - 12/8/9
+
+The Average accuracy score here is 6.0 / 10, or 60%
+NICE!!!
+
+
+
+========================================
+I finished adding diagnostics and stuff.
+Sticking with DecisionTreeClassifier.
+New addition is to use COLOR.
+
+7 - 8,9,12
+4 - 10,11,8
+5 - 16,6,8
+4 - 11,8,10
+5 - 12,7,10
+5 - 9,11,9
+2 - 11,8,10
+5 - 10,10,9
+5 - 7,9,13
+4 - 9,9,11
+
+==== Trying -1 on flag.. 
+# Loads image as such including alpha channel
+# https://docs.opencv.org/3.1.0/dc/d2e/tutorial_py_image_display.html
+
+
+6 - 10,11,8
+6 - 8,9,12
+4 - 10,11,8
+6 - 12,9,8
+4 - 11,9,9
+3 - 8,10,11
+4 - 9,12,8
+8 - 11,6,12
+3 - 11,10,8
+5 - 11,9,9
+6 - 8,11,10
+7 - 8,10,11
+7 - 11,10,8
+4 - 9,10,10
