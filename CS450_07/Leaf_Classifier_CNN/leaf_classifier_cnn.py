@@ -30,98 +30,6 @@ tf.logging.set_verbosity(tf.logging.INFO)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Cross Validation
- # 
-# sumCorrect = 0
-# for i in range(0,10):
-#     prediction = clf.predict([cvfeatures[i]])
-#     print("Prediction: ")
-#     print(prediction)
-#     actual = cvlabels[i]
-#     print("Actual: ")
-#     print(actual)
-#     print("Index of Actual: ")
-#     print(cvPairs[i][2])
-#     if actual == prediction:
-#         sumCorrect += 1
-
-# print (str(sumCorrect) + "/10")
-# print ("num1 = " + str(num1))
-# print ("num2 = " + str(num2))
-# print ("num3 = " + str(num3))
-
-
-# Testing
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def cnn_model_fn(features, labels, mode):
   """Model function for CNN."""
   # Input Layer
@@ -213,6 +121,7 @@ def cnn_model_fn(features, labels, mode):
           labels=labels, predictions=predictions["classes"])}
   return tf.estimator.EstimatorSpec(
       mode=mode, loss=loss, eval_metric_ops=eval_metric_ops)
+
 
 
 
