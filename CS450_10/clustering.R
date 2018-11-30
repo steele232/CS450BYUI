@@ -4,12 +4,6 @@ myData = state.x77
 column.names = c("Population", "Income", "Illiteracy", 
                  "Life Exp", "Murder", "HS Grad", "Frost", "Area")
 
-
-# As an Overview, let's plan to 
-# 1) Follow the prescribed methods
-# 2) Then Try clustering on each individual column and see the results
-
-
 # ------------------------------------------------------------------------
 # Agglomerative Hierachical Clustering
 # ------------------------------------------------------------------------
