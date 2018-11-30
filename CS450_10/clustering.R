@@ -146,10 +146,81 @@ myClusters$centers
 
 
 
+# ------------------------------------------------------------------------
+# ABOVE AND BEYOND :: K-Means Clustering w/ World Happiness Report (2017)
+# ------------------------------------------------------------------------
+
+`2017` <- read.csv("~/py/CS450BYUI/CS450_10/world-happiness-report/2017.csv")
+# View(`2017`)
+dimnames(`2017`)
+myData <- `2017`
+column.names <- dimnames(myData)
+column.names <- column.names[2]
+data.scaled <- myData
+data.scaled[,2:12] <- scale(myData[,2:12])
+# View(`2017`)
+# Yay, it's scaled now!
+data.scaled <- data.scaled[,-2] # remove "happiness ranking" because it's kind of backwards
+
+# Turn the first column into the row names
+# https://stackoverflow.com/questions/5555408/convert-the-values-in-a-column-into-row-names-in-an-existing-data-frame-in-r
+data.scaled2 <- data.scaled[,-1]
+rownames(data.scaled2) <- data.scaled[,1]
+data.scaled <- data.scaled2
+
+# Cluster into k=i clusters:
+# and accumulate the within-cluster sum of squares error for each k-value
+errValues <- NULL
+
+for (i in 1:5) {
+  myClusters <- kmeans(data.scaled, i)
+  errValues[i] <- myClusters$tot.withinss
+  # It was fun to plot every single one, but I don't necessarily want to run it every time.
+  clusplot(data.scaled, myClusters$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
+}
+# plot(errValues)
+
+
+# ------------------ 
+# K Means for chosen K=6
+# ------------------ 
+
+# Do it for the chosen number of K
+myClusters <- kmeans(data.scaled, 6)
+clusplot(data.scaled, myClusters$cluster, color=TRUE, 
+         shade=TRUE, labels=2, lines=0)
+
+# 3) Analyze the centers of each of these clusters. 
+# Can you identify any insight into this clustering?
+
+myClusters$centers
 
 
 
+# ------------------ 
+# Do all the same stuff EXCEPT LEAVE OUT GDP
+# ------------------ 
+# THINKING::
+# So if I leave out GDP, will I discover anything else about Happiness? 
+# Will I be able to make any claims about GDP's involvement in happiness?
+# Should I try an ANOVA or something?
+# A Linear Regression?
+# Which feature has a greatest correlation (least error ss) between happiness index?
 
+
+# At this point, "Economy..GDP.per.Capita" is at index 4, 
+# so we can remove it there.
+data.scaled <- data.scaled[,-4]
+
+errValues <- NULL
+
+for (i in 10:50) {
+  myClusters <- kmeans(data.scaled, i)
+  errValues[i] <- myClusters$tot.withinss
+  # It was fun to plot every single one, but I don't necessarily want to run it every time.
+  # clusplot(data.scaled, myClusters$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
+}
+plot(errValues)
 
 
 
