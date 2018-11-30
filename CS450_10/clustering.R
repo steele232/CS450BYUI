@@ -214,7 +214,7 @@ data.scaled <- data.scaled[,-4]
 
 errValues <- NULL
 
-for (i in 10:50) {
+for (i in 1:50) {
   myClusters <- kmeans(data.scaled, i)
   errValues[i] <- myClusters$tot.withinss
   # It was fun to plot every single one, but I don't necessarily want to run it every time.
